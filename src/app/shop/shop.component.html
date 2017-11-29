@@ -1,0 +1,45 @@
+
+<div  class="myheader" style = "background-color:white; color:white; min-height:300px; background-image:url('http://3.bp.blogspot.com/-wok_f_31pMI/VYzw91tD_fI/AAAAAAABN9o/KfzIkWDq6Zg/s1600/MBG%2BFruits%2BSalad%2BBar%2B%252813%2529.JPG')">
+  <div class="row text-center">
+      <div class="col-sm-4"><img style="border-radius:50px" width=100 height=100 src = {{shop?.header.logo}}></div>
+      <div class="col-sm-4">
+      <ul class="list-unstyled" style = "text-align:center">
+        <li><b>{{shop?.header.storeName}}</b></li>
+        <li><b>{{shop?.header.storeAddress}}</b></li>
+    </ul>
+      </div> 
+      <div class="col-sm-4">
+        <ul class="list-unstyled" style = "text-align:center">
+            <li><b>{{shop?.header.storeEmail}}</b></li>
+      </ul>
+      </div>
+  </div>
+</div>
+<!-- <hr style="opacity:0.25"> -->
+<div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+  
+  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+<div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12" *ngFor=" let inventory of inventory; let i = index">
+        <div class="card">
+            <a href= {{inventory?.productInfo.image}} class="card clickable">
+                <div class="card-img">
+                <img style="width:100%; height:200px; border:none" src= {{inventory?.productInfo.image}}>
+                </div>
+            </a>
+            <div class="card-block">
+                <p class="card-text text-center">{{inventory?.productInfo.productName}}<br>
+                        <strong>{{inventory?.productInfo.brand}}</strong></p>
+                        <span class="card-media-title" >{{inventory?.varietyList[0].packSize}} {{inventory?.varietyList[0].unit}}</span>
+                        <span class="price ng-scope" style="float:right">{{inventory?.varietyList[0].price|currency:'INR':true}}</span>
+                <p class="card-text text-center">This is a sample message</p>
+            </div>
+            <div class="card-footer text-center">
+                    <button type="button" class="btn btn-sm btn-primary" (click) = "detailInfo()">Read More...</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,19 @@
+.navbar{
+    background-color: white;
+    border: 0;
+}
+.container{
+
+}
+nav {
+    /* margin-bottom: -15px; */
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding-top:12px;
+    font-size: 15px;
+  } 
